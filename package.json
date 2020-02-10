@@ -1,0 +1,28 @@
+{
+  "name": "lion-elements",
+  "version": "1.0.0",
+  "description": "demo lion elements",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 9002",
+    "storybook:build": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChattyBGL/lion-elements.git"
+  },
+  "author": "Chatty",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChattyBGL/lion-elements/issues"
+  },
+  "homepage": "https://github.com/ChattyBGL/lion-elements#readme",
+  "dependencies": {
+    "@lion/button": "^0.5.4",
+    "@lion/core": "^0.4.3",
+    "@lion/input": "^0.5.11",
+    "@open-wc/demoing-storybook": "0.3.0",
+    "lit-html": "^1.1.2"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "tags": [
+    {
+      "name": "demo-wc-card",
+      "properties": [
+        {
+          "name": "header",
+          "type": "String",
+          "description": "Shown at the top of the card"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "cssProperties": []
+    }
+  ]
+}
