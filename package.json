@@ -21,6 +21,7 @@
   "dependencies": {
     "@lion/button": "^0.5.4",
     "@lion/core": "^0.4.3",
+    "@lion/form": "^0.4.11",
     "@lion/input": "^0.5.11",
     "@open-wc/demoing-storybook": "0.3.0",
     "lit-html": "^1.1.2"
