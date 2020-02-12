@@ -1,12 +1,12 @@
 // Import lit-html functions
 import { html, render } from 'lit-html';
-import { LitElement} from 'lit-element'; 
+import { LitElement} from 'lit-element';
 import '@lion/input/lion-input.js';
 import '@lion/form';
 import {MaxLength,MinMaxLength,Required} from '@lion/validate';
 import {LocalizeMixin,localize} from '@lion/localize';
 
-class MyApp extends LocalizeMixin(LitElement) { 
+class MyApp extends LocalizeMixin(LitElement) {
 
   static get properties() {
     return { myProp: String };
@@ -23,16 +23,15 @@ class MyApp extends LocalizeMixin(LitElement) {
         form.resetGroup();
       }
     };
-    
+
   }
 
   render() {
-    return   html
-    `
-    <h1>${this.myProp} to MyApp</h1>
+    return   html`
+    <h1>${this.myProp     } to MyApp</h1>
     <lion-form id="form2">
       <form>
-        
+
           <lion-input
             id="fName"
             name="firstName"
@@ -48,7 +47,7 @@ class MyApp extends LocalizeMixin(LitElement) {
           >
           </lion-input>
           <br>
-          
+
           <button type="button" @click="${this.handleClick}">
             Submit
           </button>
@@ -58,7 +57,7 @@ class MyApp extends LocalizeMixin(LitElement) {
   }
 
   handleClick(e) {
-        
+
     if(this.shadowRoot.getElementById('fName').value == '')
     {
         window.alert('Please enter First name');
@@ -70,9 +69,9 @@ class MyApp extends LocalizeMixin(LitElement) {
       alert(`Submitted First Name: ${this.shadowRoot.querySelector('#fName').value} and Last Name: ${this.shadowRoot.querySelector('#lName').value}`)
     }
 
-    
+
   }
-  
+
 }
 
-customElements.define('my-app', MyApp); 
+customElements.define('my-app', MyApp);
