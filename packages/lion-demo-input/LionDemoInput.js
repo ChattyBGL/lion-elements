@@ -7,13 +7,18 @@ export class LionDemoInput extends LitElement {
   constructor() {
     super();
 
-    this.defaultValue = 'Hello World!!'
+    this.defaultValue = 'Hello World!!';
+    this.flat = '';
   }
   static get properties() {
     return {
       defaultValue: {
         type: String,
         reflect: true,
+      },
+
+      flat: {
+        type: String,
       }
     };
   }
@@ -33,9 +38,29 @@ export class LionDemoInput extends LitElement {
       <p class="space">Here is css:: ${this.defaultValue}</p>
       <lion-button
         class="button"
-        @click="${()=> {alert(`submitting name: ${this.shadowRoot.querySelector('#input').value}`)}}">Submit</lion-button>
+        @click="${()=> {this.callMe()}}">Submit</lion-button>
     `;
-}
+  }
+
+  callMe(flag) {
+    if (flag) {
+      this.getCall('abc');
+    } else {
+      this.setCall('xyz');
+    }
+  }
+
+  getCall(x) {
+    return x;
+  }
+
+  setCall(y) {
+    this.flat = y;
+  }
+
+  stubCheck() {
+    return this.getCall('abc');
+  }
 }
 
 customElements.define('lion-demo-input', LionDemoInput);
