@@ -7,7 +7,7 @@ export class LionDemoInput extends LitElement {
   constructor() {
     super();
 
-    this.defaultValue = 'Hello World!!'
+    this.defaultValue = 'Hello World!!';
   }
   static get properties() {
     return {
@@ -29,13 +29,17 @@ export class LionDemoInput extends LitElement {
 
   render() {
     return html`
-      <lion-input id="input" label="My label" name="myName" .modelValue="${'foo'}"></lion-input>
+      <lion-input id="input" label="My First label" name="myName"></lion-input>
       <p class="space">Here is css:: ${this.defaultValue}</p>
       <lion-button
         class="button"
-        @click="${()=> {alert(`submitting name: ${this.shadowRoot.querySelector('#input').value}`)}}">Submit</lion-button>
+        @click="${()=> {this.formSubmitted()}}">Submit</lion-button>
     `;
-}
+  }
+
+  formSubmitted() {
+    console.log('Input value:::',this.shadowRoot.querySelector('lion-input').modelValue);
+  }
 }
 
 customElements.define('lion-demo-input', LionDemoInput);
