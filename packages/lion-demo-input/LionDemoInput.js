@@ -7,7 +7,7 @@ export class LionDemoInput extends LitElement {
   constructor() {
     super();
 
-    this.defaultValue = 'Hello World!!!';
+    this.defaultValue = 'Hello World !!!!';
   }
   static get properties() {
     return {
