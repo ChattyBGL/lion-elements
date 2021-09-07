@@ -20,9 +20,11 @@
   "homepage": "https://github.com/ChattyBGL/lion-elements#readme",
   "dependencies": {
     "@lion/button": "^0.5.4",
+    "@lion/checkbox-group": "^0.18.5",
     "@lion/core": "^0.4.3",
     "@lion/form": "^0.12.4",
     "@lion/input": "^0.5.11",
+    "@lion/input-email": "^0.13.7",
     "@open-wc/demoing-storybook": "0.3.0",
     "lit-html": "^1.1.2",
     "storybook": "^6.3.7"
